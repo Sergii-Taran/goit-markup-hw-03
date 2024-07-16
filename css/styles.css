@@ -6,6 +6,9 @@ body {
 
 ul, ol {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
 }
 
 a {
@@ -14,6 +17,22 @@ a {
 
 button {
     cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .page-hero,
@@ -45,12 +64,33 @@ button {
     /* color: #434455; */
 }
 
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 /* ---------   --------- */
 /*TODO ---------  HEADER --------- */
 
-.page-header {}
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
 
-.header-nav {}
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
 
 .logo {
     font-family: "Raleway", sans-serif;
@@ -62,21 +102,30 @@ button {
     color: #4d5ae5;
 }
 
+.header-logo {
+    padding: 24px 0;
+    margin-right: 76px;
+}
+
 .header-logo .logo-part {
     color: #2e2f42;
 }
 
-.footer-logo .logo-part {
-    color: #f4f4fd;
+.logo-part {
+    
 }
 
-.logo-part {}
-
-.nav-list {}
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
 .nav-item {}
 
 .nav-link {
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -84,16 +133,22 @@ button {
     color: #2e2f42;
 }
 
-
 .contacts {
     font-style: normal;
+    margin-left: auto;
 }
 
-.contacts-list {}
+.contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
 .contacts-item {}
 
 .contacts-link {
+    display: block;
+    padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -111,7 +166,8 @@ button {
 /*TODO ---------  section HERO --------- */
 
 .page-hero {
-    
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -119,7 +175,11 @@ button {
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #fff;}
+    color: #fff;
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
 
 .hero-btn {
     background-color: #4d5ae5;
@@ -128,6 +188,11 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: none;
 }
 
 .hero-btn:hover,
@@ -138,20 +203,27 @@ button {
 /* ---------   --------- */
 /*TODO ---------  section FEATURES --------- */
 
-.page-features {}
-
-.features-title {}
-
-.features-list {}
-
-.features-item {}
-
-.features-subtitle {
+.page-features {
     
 }
 
+.features-title {}
+
+.features-list {
+    display: flex;
+    gap: 24px;
+}
+
+.features-item {
+    width: calc((100% - 3 * 24PX) / 4);
+}
+
+.features-subtitle {
+    margin-bottom: 8px;
+}
+
 .features-text {
-    
+
 }
 
 /* ---------   --------- */
@@ -161,19 +233,34 @@ button {
     background-color: #f4f4fd;
 }
 
-.team-title {}
+.team-title {
+    margin-bottom: 72px;
+}
 
-.team-list {}
+.team-list {
+    display: flex;
+    gap: 24px;
+}
 
 .team-item {
     background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    width: calc((100% - 3 * 24PX) / 4);
 }
 
 .team-image {
-   
+   /* margin-bottom: 32px; */
 }
 
-.team-subtitle,
+.container-team {
+    padding: 32px 0;
+}
+
+.team-subtitle {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
 .team-text {
     text-align: center;
 }
@@ -181,17 +268,37 @@ button {
 /* ---------   --------- */
 /*TODO ---------  section PORTFOLIO --------- */
 
-.page-portfolio {}
+.page-portfolio {
+   
+}
 
-.portfolio-title {}
+.portfolio-title {
+    margin-bottom: 72px;
+}
 
-.portfolio-list {}
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
 
-.portfolio-item {}
+.portfolio-item {
+    width: calc((100% - 2 * 24px) / 3);
+}
 
 .portfolio-image {}
 
-.portfolio-subtitle {}
+.container-portfolio {
+    padding: 16px;
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+}
+
+.portfolio-subtitle {
+    margin-bottom: 8px;
+}
 
 .portfolio-text {}
 
@@ -199,11 +306,21 @@ button {
 /*TODO ---------  FOOTER --------- */
 
 .page-footer {
-   
+   padding: 100px 1020px 100px 156px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;   
+}
+
+.footer-logo .logo-part {
+    color: #f4f4fd;
 }
 
 .footer-text {
     color: #f4f4fd;
+    max-width: 264px;   
 }
 
 /* ---------   --------- */
